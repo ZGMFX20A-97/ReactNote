@@ -3,8 +3,9 @@ import "./Main.css"
 import {ReactMarkdown} from "react-markdown";
 
 
-const Main = ({activeNote,onUpdateNote}) => {
-    const onEditNote=(key,value)=>{
+const Main = ({ activeNote,onUpdateNote }) => {
+    //ノートを編集するための関数
+    const onEditNote = (key,value) => {
         onUpdateNote({
             ...activeNote,
             [key]:value,
@@ -12,7 +13,7 @@ const Main = ({activeNote,onUpdateNote}) => {
         });
     };
 
-
+    //アクティブなノートが存在しない場合
     if(!activeNote) {
         return <div className="no-active-note">ノートが選択されていません</div>;
     }
