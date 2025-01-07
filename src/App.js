@@ -22,8 +22,8 @@ function App() {
 
     //ページをリロードするときデフォルトで１番目のノートを選択するようにする
     useEffect(() => {
-
-        setActiveNote(notes[0].id);
+        
+        setActiveNote(notes[0]?.id);
 
     }, []);
 
@@ -34,7 +34,7 @@ function App() {
         //ノートオブジェクトのスキーマを定義する
         const newNote = {
             id: uuid(),
-            title: "New note",
+            title: "新しいノート",
             content: "",
             modDate: Date.now(),
         };
@@ -48,10 +48,6 @@ function App() {
         //削除しようとするノート以外のノートを新しい配列に格納して残す
         const filterNotes = notes.filter(note => note.id !== id);
         setNotes(filterNotes);
-    }
-
-    const onEditNote = () => {
-
     }
 
     //ノートを更新する関数

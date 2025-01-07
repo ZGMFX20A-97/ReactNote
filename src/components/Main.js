@@ -1,6 +1,6 @@
 import React from "react";
 import "./Main.css"
-import {ReactMarkdown} from "react-markdown";
+import  ReactMarkdown from "react-markdown";
 
 
 const Main = ({ activeNote,onUpdateNote }) => {
@@ -41,3 +41,4 @@ const Main = ({ activeNote,onUpdateNote }) => {
 
 
 export default Main;
+ 
